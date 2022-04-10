@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.dto.ApiResponse;
 import com.example.demo.service.SenderService;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,7 +18,7 @@ public class SenderController {
   private SenderService senderService;
 
   @PostMapping
-  public ResponseEntity<?> send(@RequestBody Object payload) {
+  public ResponseEntity<?> send(@RequestBody Object payload) throws JsonProcessingException {
     senderService.send(payload);
     return ResponseEntity.ok().body(ApiResponse.builder().message("Sent Successfully").build());
   }

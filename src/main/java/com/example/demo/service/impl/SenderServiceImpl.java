@@ -1,7 +1,11 @@
 package com.example.demo.service.impl;
 
 import com.example.demo.dto.ApiResponse;
+import com.example.demo.dto.EncryptDto;
 import com.example.demo.service.SenderService;
+import com.example.demo.utils.EncryptDecryptUtils;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
@@ -15,10 +19,14 @@ import org.springframework.web.client.RestTemplate;
 public class SenderServiceImpl implements SenderService {
 
   private final RestTemplate restTemplate = new RestTemplate();
+  private final ObjectMapper mapper = new ObjectMapper();
 
   @Override
-  public void send(Object obj) {
-    HttpEntity<?> request = new HttpEntity<>(obj);
+  public void send(Object obj) throws JsonProcessingException {
+    log.info("Object to send: {}", obj);
+    String transactionalObjStr = EncryptDecryptUtils.encrypt(mapper.writeValueAsString(obj), "secret");
+    log.info("Encrypt: {}", transactionalObjStr);
+    HttpEntity<?> request = new HttpEntity<>(EncryptDto.builder().encryptedData(transactionalObjStr).build());
     restTemplate.exchange("http://localhost:8080/receive/",
       HttpMethod.POST, request, ApiResponse.class);
   }

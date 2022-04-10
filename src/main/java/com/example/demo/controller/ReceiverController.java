@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import com.example.demo.dto.ApiResponse;
+import com.example.demo.dto.EncryptDto;
 import com.example.demo.service.ReceiverService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import java.sql.SQLException;
@@ -19,7 +20,7 @@ public class ReceiverController {
   private ReceiverService receiverService;
 
   @PostMapping("/")
-  public ResponseEntity<?> receiveObject(@RequestBody Object payload) throws SQLException, JsonProcessingException {
+  public ResponseEntity<?> receiveObject(@RequestBody EncryptDto payload) throws SQLException, JsonProcessingException {
     receiverService.receive(payload);
     return ResponseEntity.ok().body(ApiResponse.builder().message("Success").build());
   }
