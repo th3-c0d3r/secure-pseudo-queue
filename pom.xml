@@ -8,8 +8,8 @@
 		<version>2.6.6</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
-	<artifactId>demo</artifactId>
+	<groupId>io.github.th3c0d3r</groupId>
+	<artifactId>pseudo-queue</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Secure pseudo queue</name>
 	<description>Project NatWest Java Developer Hiring Challenge</description>
@@ -34,12 +34,16 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<optional>true</optional>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-ui</artifactId>
+			<version>1.6.7</version>
 		</dependency>
 	</dependencies>
 
