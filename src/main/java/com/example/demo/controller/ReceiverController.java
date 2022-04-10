@@ -21,6 +21,6 @@ public class ReceiverController {
   @PostMapping("/")
   public ResponseEntity<?> receiveObject(@RequestBody Object payload) throws SQLException, JsonProcessingException {
     receiverService.receive(payload);
-    return ResponseEntity.ok().body(new ApiResponse<>("Success", payload));
+    return ResponseEntity.ok().body(ApiResponse.builder().message("Success").build());
   }
 }
