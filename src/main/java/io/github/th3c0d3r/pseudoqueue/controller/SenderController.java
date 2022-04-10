@@ -1,11 +1,9 @@
-package com.example.demo.controller;
+package io.github.th3c0d3r.pseudoqueue.controller;
 
-import com.example.demo.dto.ApiResponse;
-import com.example.demo.service.SenderService;
+import io.github.th3c0d3r.pseudoqueue.dto.ApiResponse;
+import io.github.th3c0d3r.pseudoqueue.service.SenderService;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.info.Info;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

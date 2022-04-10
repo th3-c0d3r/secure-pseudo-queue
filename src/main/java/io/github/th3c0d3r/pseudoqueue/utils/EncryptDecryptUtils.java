@@ -1,4 +1,4 @@
-package com.example.demo.utils;
+package io.github.th3c0d3r.pseudoqueue.utils;
 
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;

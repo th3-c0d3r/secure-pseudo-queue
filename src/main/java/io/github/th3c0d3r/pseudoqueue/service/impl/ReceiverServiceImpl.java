@@ -1,12 +1,10 @@
-package com.example.demo.service.impl;
+package io.github.th3c0d3r.pseudoqueue.service.impl;
 
-import com.example.demo.dto.EncryptDto;
-import com.example.demo.entity.Message;
-import com.example.demo.repo.MessageRepo;
-import com.example.demo.service.ReceiverService;
-import com.example.demo.utils.EncryptDecryptUtils;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import io.github.th3c0d3r.pseudoqueue.dto.EncryptDto;
+import io.github.th3c0d3r.pseudoqueue.entity.Message;
+import io.github.th3c0d3r.pseudoqueue.repo.MessageRepo;
+import io.github.th3c0d3r.pseudoqueue.service.ReceiverService;
+import io.github.th3c0d3r.pseudoqueue.utils.EncryptDecryptUtils;
 import java.sql.SQLException;
 import java.util.Objects;
 import javax.sql.rowset.serial.SerialClob;

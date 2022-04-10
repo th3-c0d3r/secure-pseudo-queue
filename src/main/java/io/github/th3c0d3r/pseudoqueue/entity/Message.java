@@ -1,4 +1,4 @@
-package com.example.demo.entity;
+package io.github.th3c0d3r.pseudoqueue.entity;
 
 import java.sql.Clob;
 import javax.persistence.Entity;

@@ -1,16 +1,15 @@
-package com.example.demo.service.impl;
+package io.github.th3c0d3r.pseudoqueue.service.impl;
 
-import com.example.demo.dto.ApiResponse;
-import com.example.demo.dto.EncryptDto;
-import com.example.demo.service.SenderService;
-import com.example.demo.utils.EncryptDecryptUtils;
+import io.github.th3c0d3r.pseudoqueue.dto.ApiResponse;
+import io.github.th3c0d3r.pseudoqueue.dto.EncryptDto;
+import io.github.th3c0d3r.pseudoqueue.service.SenderService;
+import io.github.th3c0d3r.pseudoqueue.utils.EncryptDecryptUtils;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 

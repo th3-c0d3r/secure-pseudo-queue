@@ -1,4 +1,4 @@
-package com.example.demo.service;
+package io.github.th3c0d3r.pseudoqueue.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 

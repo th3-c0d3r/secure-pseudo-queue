@@ -1,6 +1,6 @@
-package com.example.demo.exception;
+package io.github.th3c0d3r.pseudoqueue.exception;
 
-import com.example.demo.dto.ApiResponse;
+import io.github.th3c0d3r.pseudoqueue.dto.ApiResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,11 +1,10 @@
-package com.example.demo.controller;
+package io.github.th3c0d3r.pseudoqueue.controller;
 
-import com.example.demo.dto.ApiResponse;
-import com.example.demo.dto.EncryptDto;
-import com.example.demo.service.ReceiverService;
+import io.github.th3c0d3r.pseudoqueue.dto.ApiResponse;
+import io.github.th3c0d3r.pseudoqueue.dto.EncryptDto;
+import io.github.th3c0d3r.pseudoqueue.service.ReceiverService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import io.swagger.v3.oas.annotations.Hidden;
-import io.swagger.v3.oas.annotations.Operation;
 import java.sql.SQLException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

@@ -1,4 +1,4 @@
-package com.example.demo;
+package io.github.th3c0d3r.pseudoqueue;
 
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.info.Info;
